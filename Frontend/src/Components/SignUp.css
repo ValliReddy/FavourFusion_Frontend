@@ -1,0 +1,77 @@
+/* SignUp.css */
+
+/* Body Styles */
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* Link Styles */
+.form a {
+  text-decoration: none;
+  color: #1ab188;
+  transition: .5s ease;
+}
+.form a:hover {
+  color: #0d5e50;
+}
+
+/* Form Styles */
+.form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+/* Tab Styles */
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: #a0b3b040;
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: #0d5e50;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+/* Tab Content Styles */
+.tab-content > div:last-child {
+  display: none;
+}
+
+/* Label and Input Styles */
+.form label, .form input {
+  color: #ffffff; /* Set text color to white */
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin-left: 10px; /* Add left margin */
+    margin-right: 10px; /* Add right margin */
+  }
+}

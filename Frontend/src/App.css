@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sriracha&display=swap');
+/* styles.css */
+.searchclose {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .searchclose {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchclose {
+    font-size: 18px;
+  }
+}
+
+/* Base styles */
+.nutrition-info {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #E7D4B5; /* Light green background color */
+  border-radius: 10px; /* Rounded corners */
+  width: 100%; /* Ensures it takes full width of the parent */
+  box-sizing: border-box; /* Includes padding and border in width calculation */
+}
+
+.nutrition-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly */
+}
+
+.nutrition-item {
+  width: calc(33.33% - 10px); /* Three items per row with margin */
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 8px; /* Slightly rounded corners */
+  background-color: white; /* Inner box background color */
+  overflow: hidden; /* Hides any overflowing content */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .nutrition-item {
+      width: calc(50% - 10px); /* Two items per row with margin */
+  }
+
+  .nutrition-item h8 {
+      font-size: 12px; /* Decrease font size for smaller screens */
+  }
+}
+
+
+
+
+/*this for size for mobile */
+@media screen and (max-width: 480px) {
+  body, input, select, textarea,span{
+    font-size: 9pt; } }
+
+
+@media (max-width: 480px) {
+  .responsive-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .user-recipe-img {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Ensure padding around the container */
+  }
+
+  .profile-container, .menu-card {
+    margin: 0 auto; /* Center the content with equal margins */
+    padding: 0 20px; /* Ensure padding around the content */
+  }
+
+  .menu-card {
+    margin-bottom: 20px; /* Add gap between the menu-card and profile-container */
+  }
+}
+
+
+/* Add the following CSS to position #login-container on the right side */
+.new-userecipe-container {
+  width: 200px;
+  /* padding: 20px;  */
+  border-radius: 10px; 
+  background: #fffffb;
+  position: center; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+.custom-h1 {
+  font-family: 'Sriracha', cursive, arial, sans-serif;
+  color: #ffc145; /* Adjust accent color */
+}
+.custom-p{
+  font-family: 'Sriracha', cursive, arial, sans-serif;
+  
+}
+.title{
+  font-family: 'Sriracha', cursive, arial, sans-serif;
+  
+}
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  text-decoration: none;
+}
+
+
+.container {
+  display: flex;
+  justify-content: flex-start; /* Changed to flex-start to align items to the start */
+  align-items: flex-start;
+}
+
+.menu-card {
+  flex: 1;
+  margin-right: 30px; /* Reduced margin to decrease gap */
+}
+
+.new-login-container {
+  width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fffffb;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.new-profile-img {
+  height: 100px;
+  width: 100px;
+  /* background: url('https://images.unsplash.com/photo-1504933350103-e840ede978d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80'); */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.new-profile-name {
+  font-family: 'Sriracha', cursive, arial, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffc145; /* Adjust accent color */
+  font-size: 28px; /* Default size for larger screens */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .new-profile-name {
+    font-size: 24px; /* Smaller size for mobile screens */
+  }
+}
+
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  .new-profile-name {
+    font-size: 20px; /* Even smaller size for very small mobile screens */
+  }
+}
+
+
+.new-description {
+  margin-bottom: 20px;
+  font-family: 'Sriracha', cursive, arial, sans-serif;
+}
+
+.new-follow-button {
+  width: 70%;
+  height: 40px;
+  font-size: 1rem;
+  margin: 20px 15% 0 15%;
+  color: #fffffb; /* Adjust text color */
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background: linear-gradient(45deg, #ff6b6c, #ffc145); /* Adjust gradient colors */
+  background-size: 300% 300%;
+  outline: none;
+  transition: all 200ms ease-in-out;
+}
+
+.new-follow-button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
+  cursor: pointer;
+}
+
+.new-followers, .new-ratings {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.new-followers .label, .new-ratings .label {
+  color: #ffc145; /* Adjust text color to match name */
+  font-family: 'Sriracha', cursive, arial, sans-serif; /* Apply cursive font */
+}
+
+.new-followers .value, .new-ratings .value {
+  font-family: 'Roboto', arial, sans-serif; /* Keep values in default font */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #e0e0e0;
+}
+
+.image.square-image {
+  display: block;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative;
+}
+
+.image.square-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.App {
+  text-align: center;
+}
+.star {
+  color: gold; /* or any other gold color you prefer */
+}
+
+.star-rating {
+  display: inline-block;
+}
+
+.star-rating span {
+  cursor: pointer; /* Change cursor to pointer when hovering over stars */
+}
+
+.star-rating span.active {
+  color: gold; /* Change color of active stars to gold */
+}
+
+
+.menu-card {
+  max-width: 900px;
+  margin: left;
+  background: #fffffb;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+  padding: 1rem;
+  position: relative;
+}
+
+.card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.recipe {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: linear-gradient(45deg, #ff6b6c, #ffc145); /* Adjust gradient colors */
+  color: #fffffb; /* Adjust text color */
+  padding: 0.5rem 1rem;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 1rem;
+  outline: none;
+  transition: all 200ms ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .recipe {
+      padding: 8px 10px;
+      font-size: 8px;
+  }
+}
+@media (max-width: 480px) {
+  button {
+      padding: 8px 10px;
+      font-size: 8px;
+  }
+}
+.button.recipe:hover {
+  background-color: #45a049;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

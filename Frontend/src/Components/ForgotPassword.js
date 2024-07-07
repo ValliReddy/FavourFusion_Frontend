@@ -20,9 +20,9 @@ const ForgotPasswordForm = () => {
         setMessage('Check your email for the OTP.');
         setNotificationKey(prevKey => prevKey + 1);
         // Optionally, handle redirection after showing the message
-        // setTimeout(() => {
+        setTimeout(() => {
           navigate('/reset-password'); // Redirect to reset password page
-        // }, 3000); // Redirect after 3 seconds (adjust timing as needed)
+        }, 3000); // Redirect after 3 seconds (adjust timing as needed)
       })
       .catch(err => {
         console.error(err);

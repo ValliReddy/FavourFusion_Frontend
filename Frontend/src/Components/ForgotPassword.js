@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Notification from './Notification';
+import { useNavigate } from 'react-router-dom';
 
 const ForgotPasswordForm = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [notificationKey, setNotificationKey] = useState(0);
@@ -19,7 +21,7 @@ const ForgotPasswordForm = () => {
         setNotificationKey(prevKey => prevKey + 1);
         // Optionally, handle redirection after showing the message
         setTimeout(() => {
-          window.location.href = '/reset-password'; // Redirect to reset password page
+          navigate('/reset-password'); // Redirect to reset password page
         }, 3000); // Redirect after 3 seconds (adjust timing as needed)
       })
       .catch(err => {

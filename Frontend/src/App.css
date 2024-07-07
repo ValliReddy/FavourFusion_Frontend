@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sriracha&display=swap');
 /* styles.css */
+.spinner-container {
+  position: absolute;
+  top: 70%; /* Adjust top percentage as needed */
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(30px); /* Adjust translateY value as needed */
+  z-index: 999; /* Ensure spinner is above other content */
+}
+
+.spinner {
+  border: 5px solid #f3f3f3; /* Light grey border */
+  border-top: 5px solid black; /* Blue border for spinner animation */
+  border-radius: 50%;
+  width: 70px; /* Adjust size as needed */
+  height: 70px; /* Adjust size as needed */
+  animation: spin 1s linear infinite; /* Spin animation */
+}
+@media (max-width: 768px) {
+  .spinner {
+    width: 40px; /* Adjusted size for smaller screens */
+    height: 40px; /* Adjusted size for smaller screens */
+  }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 .searchclose {
   font-weight: bold;
   cursor: pointer;

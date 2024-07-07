@@ -13,6 +13,7 @@ const MainContent = () => {
   const { setRecipeID } = useContext(RecipeContext);
   const { searchQuery: contextSearchQuery, setSearchQuery: setContextSearchQuery } = useContext(SearchContext);
   const { transcript, resetTranscript } = useSpeechRecognition();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -24,6 +25,8 @@ const MainContent = () => {
         setFilteredRecipes(response.data); // Initialize with all recipes
       } catch (error) {
         console.error('Error fetching recipes:', error);
+      } finally {
+        setLoading(false); // Set loading to false when data fetching is complete
       }
     };
     fetchRecipes();
@@ -114,22 +117,28 @@ const MainContent = () => {
 
 </div>
 
-        <section className="tiles">
-          {filteredRecipes.map((recipe) => (
-            <article key={recipe._id} className="style1">
-              <span className="image square-image">
-                <img src={recipe.imagePath} alt={recipe.recipeName} />
-              </span>
-              <Link to="/all" onClick={() => handleRecipeClick(recipe._id)}>
-                <h2>{recipe.recipeName}</h2>
-                <div className="content">
-                  {/* <p>
-                    Recipe by <strong style={{ textTransform: 'capitalize' }}></strong>
-                  </p> */}
-                </div>
-              </Link>
-            </article>
-          ))}
+<section className="tiles">
+          {loading ? (
+            <div className="spinner-container">
+              <div className="spinner"></div>
+            </div>
+          ) : (
+            filteredRecipes.map((recipe) => (
+              <article key={recipe._id} className="style1">
+                <span className="image square-image">
+                  <img src={recipe.imagePath} alt={recipe.recipeName} />
+                </span>
+                <Link to="/all" onClick={() => handleRecipeClick(recipe._id)}>
+                  <h2>{recipe.recipeName}</h2>
+                  <div className="content">
+                    {/* <p>
+                      Recipe by <strong style={{ textTransform: 'capitalize' }}></strong>
+                    </p> */}
+                  </div>
+                </Link>
+              </article>
+            ))
+          )}
         </section>
       </div>
     </div>
